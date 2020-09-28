@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#131212"
+    android:background="#464A60"
     tools:context="com.example.crud.DetalleArticulos">
     <LinearLayout
         android:layout_width="match_parent"

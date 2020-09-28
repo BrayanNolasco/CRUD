@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#C5C5C5"
+    android:background="#79957B"
     tools:context="com.example.crud.ConsultaSpinner">
     <TextView
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         android:textSize="18dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:textColor="#AD0505"
+        android:textColor="#000000"
         android:fontFamily="cursive"
         />
     <Spinner
@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Código: "
-            android:textColor="#AD0505"
+            android:textColor="#050505"
             android:textSize="18dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Descripción: "
-            android:textColor="#AD0505"
+            android:textColor="#040404"
             android:textSize="18dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
@@ -63,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Precio: "
-            android:textColor="#AD0505"
+            android:textColor="#000000"
             android:textSize="18dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
