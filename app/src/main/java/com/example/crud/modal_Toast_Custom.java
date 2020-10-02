@@ -1,4 +1,4 @@
-package com.mjgl.sis21ademo;
+package com.example.crud;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -77,7 +77,7 @@ public class modal_Toast_Custom extends AppCompatActivity{
         //dialogo = new androidx.appcompat.app.AlertDialog.Builder(context);
         dialogo = new androidx.appcompat.app.AlertDialog.Builder(context);
         //dialogo = new AlertDialog.Builder(context);
-        dialogo.setIcon(R.drawable.ic_delete);
+        dialogo.setIcon(R.drawable.ic_borrar);
         dialogo.setTitle("Warning");
         dialogo.setMessage(mensaje);
         dialogo.setCancelable(true);

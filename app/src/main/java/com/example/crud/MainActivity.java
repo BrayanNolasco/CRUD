@@ -9,6 +9,8 @@ import android.os.Build;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import com.github.clans.fab.FloatingActionMenu;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
     ConexionSQLite conexion = new ConexionSQLite(this);
     Dto datos = new Dto();
     AlertDialog.Builder dialogo;
+    modal_Toast_Custom modal= new modal_Toast_Custom();
+    Acercade acer = new Acercade();
+
+
+    private FloatingActionMenu menu;
+    private com.github.clans.fab.FloatingActionButton item1, item2, item3;
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -70,6 +79,55 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setSubtitleTextColor(getResources().getColor(R.color.TEXT));
         toolbar.setTitle("CRUD");
         setSupportActionBar(toolbar);
+
+        menu = findViewById(R.id.menu_fab);
+        item1 = findViewById(R.id.item1);
+        item2 = findViewById(R.id.item2);
+        item3 = findViewById(R.id.item3);
+
+        menu.setOnMenuToggleListener(new FloatingActionMenu.OnMenuToggleListener() {
+            @Override
+            public void onMenuToggle(boolean opened) {
+                if (opened){
+                    Toast.makeText(MainActivity.this, "Menu Abierto",Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(MainActivity.this, "Menu Cerrado", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (menu.isOpened()) {
+                    menu.close(true);
+                }
+            }
+        });
+
+        item1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        item2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Acercade.class);
+                startActivity(intent);
+            }
+        });
+
+
+        item3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                finish();
+            }
+        });
 //y esto para pantalla completa (oculta incluso la barra de estado)
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
